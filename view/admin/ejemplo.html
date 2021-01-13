@@ -1,0 +1,25 @@
+<div class="uk-position-center">
+    <div class="uk-card uk-card-default uk-card-hover uk-grid-small uk-grid-match uk-card-body">
+        <label class="uk-card-title uk-align-center">Simple and flat MP3 Player</label>
+      <div class="file-upload uk-card-body">
+        <input type="file" id="file-input" onchange=" setSongManually(this.files[0]);" accept="audio/*"/>
+        <label for="file-input" id="fileName">Upload your music</label>
+      </div>
+      <div class="input-text">
+        <label style="margin-bottom:1rem;">Put song url and player will play it!</label>
+        <br>
+        <input type="input" class="material-input-text" />
+      </div>
+    </div>
+    <!-- End of INPUT -->
+    <div class="uk-card">
+      <div class="uk-grid-small uk-flex-middle" uk-grid>
+      <div class="uk-width-auto control" style="margin-top: 0.5rem">  
+        <i class="material-icons theme-main control-icon">play_arrow</i>
+      </div>
+      <input class="uk-width-expand uk-range" id="rangeBar" min="0" type="range" value="0" disabled/>
+      <label class="uk-width-auto" id="time">0:0</label>
+      </div>
+    </div>
+    <audio id="audio" src="" ontimeupdate="updateTime(this);" onloaded="songLoaded(this);" autoplay></audio>
+  </div>
