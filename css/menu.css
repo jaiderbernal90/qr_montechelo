@@ -249,6 +249,10 @@
     .dropdown-item:hover .dropdown{
       left: 250px;
     }
+    .dropdownHeigth-visualizador{
+      height:59px !important;
+      margin-top: -10px !important;
+   }
     /*  */
     header#mainHeader nav div > ul > li {
       font-size: 14px;
@@ -393,6 +397,12 @@
       width: 120px;
       height: 120px;
       margin: auto;
+      border-radius: 100%;
+      background-position: center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      object-fit: cover;
+      object-position: center center;
     }
     .avatar__menu h2{
      margin-top: 0;
@@ -460,7 +470,7 @@
      transition: all .6s ease;
    }
    .dropdown li {
-     height: 0px !important;
+     height: 0px ;
    }
    .showDropdownUser li, .dropdownHeigth li {
      height: 59px !important;
@@ -472,6 +482,13 @@
      overflow-y: auto !important;
      opacity: 1 !important;
    }
+   .ulHeight{
+    min-height: 290px !important;
+    margin-top: 5px !important;
+    height: auto;
+    overflow-y: auto !important;
+    opacity: 1 !important;
+  }
    .liHeight{
      height: 59px !important;
      opacity: 1;
@@ -515,6 +532,9 @@
        height:190px !important;
        transition-delay: .5s;
    }
+   .dropdownHeigth-visualizador{
+      height:150px !important;
+   }
    .rotate{
      transform: rotateX(180deg);
      padding-right: 24px !important;
@@ -541,6 +561,13 @@
      background-color: #002758;
      height: 200px !important;
    }
+   .showDropdown-visualizador{
+    background-color: #002758;
+    height: 59px !important;
+  }
+  .showDropdown-visualizador li{
+    opacity: 1 !important;
+  }
    .showDropdownUser{
      background-color: #002758;
      height: 100px !important;

@@ -16,28 +16,39 @@
 	<!-- ICON -->
 	<link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
 	<!-- LOCAL CSS -->
-	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="stylesheet" type="text/css" href="css/repass.css">
 	<title>QR Montechelo</title>
 </head>
 <body>
+	<!-- LOADER -->
+	<div class="centrado" id="onload">
+        <div class="wrapper">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+            <span>Cargando</span>
+        </div>
+	</div>
 
-	<section class="container-fluid center-align">
-		<div class="row container-login m-0">
-			<div class="col s12 h-100 w-100 vertical-middle">
-				<img src="img/logo-montechelo.png" alt="" class="img-responsive img-logo m-auto">
-			</div>
-		</div>
-		<div class="row container-login-form">
+	<section class="container-fluid">
+		<div class="row m-0 container-login-form">
 			<div class="col s12">
 				<div class="title-log center">
-					<h4>BIENVENIDO</h4>
 					<div class="title-log-desk">
-						<span>Bienvenido a QR Montechelo</span>
-						<h4>INICIA SESIÓN</h4>
+						<h4>¿Olvidó la contraseña?</h4>
+						<div class="mt-2">
+							<span class="spans-info text-twenty">Ingrese la dirección asociada a su cuenta.</span>
+						</div>
+						<div class="mt-2">
+							<span class="spans-info text-little">Nosotros le enviaremos un enlace para recuperar su contraseña.</span>
+						</div>
 					</div>
 				</div>
 				<div class="center-align center">
-					<form action="" class="form-control center-align" method="POST" enctype="multipart/form-data"> 
+					<form action="" class="form-control center-align mt-5-phone" method="POST" enctype="multipart/form-data"> 
 						<div class="row m-0">
 							<div class="input-field col s12 m-0">
 								<i class="far fa-envelope prefix p-absolute"></i>
@@ -46,25 +57,20 @@
 								<span class="helper-text left-align" data-error="El correo debe ser válido y contener el dominio Montechelo." data-success="right"></span>
 							</div>
 						</div>
-						<div class="row m-0">
-							<div class="input-field col s12 m-0 mt-2">
-								<i class="fas fa-lock prefix p-absolute"></i>
-								<input id="icon_pass" type="password" class="validate">
-								<label for="icon_pass" class="label-text">Contraseña</label>
-								<span id="spanMostrar" class="form-clear d-none"><i id="iconMostrar" class="fas fa-eye"></i></span>
-							</div>
-						</div>
-						<div class="right-align link-pass">
-							<span><a href="">¿Olvidó la contraseña?</a></span>
-						</div>
-						<div class="row m-0">
-							<a href="view/home.html"><button type="button" class="btn btn-rounded z-depth-3"> INGRESAR</button></a>
+						<div class="row m-0 mt-2 ">
+							<a href="index.php"><button type="button" class="btn btn-rounded z-depth-3 btn-disabled" > VOLVER</button></a>
+							<a href=""><button type="button" class="btn btn-rounded z-depth-3"> INGRESAR</button></a>
 						</div>
 					</form>
 				</div>
 				<footer class="mt-2 center">
 					<span>Desarrollado por Montechelo - SENA &copy;</span>
 				</footer>
+			</div>
+		</div>
+		<div class="row container-login">
+			<div class="col s12 h-100 w-100 vertical-middle">
+				<img src="img/logo-montechelo.png" alt="" class="img-responsive img-logo m-auto">
 			</div>
 		</div>
 	</section>
@@ -74,6 +80,7 @@
 	<!-- Compiled and minified JavaScript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<!--LOCAL JAVASCRIPT -->
-	<script type="text/javascript" src="js/input-pass.js"></script>
+	<script type="text/javascript" src="js/loader.js"></script>
+
 </body>
 </html>

@@ -10,7 +10,7 @@ $(document).ready(() => {
                 "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
                 "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
                 "sInfoPostFix":    "",
-                "sSearch":         "<div class='input-field'><i class='fas fa-search prefix p-absolute'></i><input id='searchs' type='text' class='validate'><label for='searchs'>Buscar </label></div></div>",
+                "sSearch":         "<div class='input-field input-field-table'><input id='searchs' type='text' class='validate'><label for='searchs' class='label-text'>Buscar </label><span id='spanMostrar' class='form-clear d-none'><i id='iconMostrar' class='icon-prefix-final fas fa-search prefix'></i></span></div>",
                 "sUrl":            "",
                 "sInfoThousands":  ",",
                 "sLoadingRecords": "Cargando...",

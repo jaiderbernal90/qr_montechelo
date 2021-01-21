@@ -1,0 +1,52 @@
+<ul>
+    <li>
+        <i class="fas fa-home d-none-phone"></i><a href="home.php" class="nav-links"><i class="fas fa-home d-none-desk"></i>Inicio</a>
+    </li>
+    <!-- ---------------------------------------------------------------------- -->
+    <li  class="dropdown-item">
+        <i class="fas fa-briefcase d-none-phone"></i>
+        <div class="dropdown-menu-button nav-links">
+            <i class="fas fa-briefcase d-none-desk" ></i> <span>Administración</span> <i class="fas fa-sort-down"></i>
+        </div>
+        <ul class="dropdown">
+            <li>
+                <a href="leerqr.php" class=""><i class="fas fa-qrcode"></i>Leer QR</a>
+            </li>
+            <li>
+                <a href="registerImplements.php" class=""><i class="fas fa-folder-plus"></i>Generar QR</a>
+            </li>
+            <li>
+                <a href="stats.php" class=""><i class="fas fa-chart-line"></i>Estadisticas</a>
+            </li>
+            <li>
+                <a href="implementos.php" class=""><i class="fas fa-box-open"></i>Implementos</a>
+            </li>
+        </ul>
+    </li>
+    <!-------------------------------------------------------------------------->
+    <li class="dropdown-item">
+        <i class="fas fa-users d-none-phone"></i>
+        <div class="dropdown-menu-button nav-links">
+            <i class="fas fa-users d-none-desk"></i> <span>Usuarios</span> <i class="fas fa-sort-down "></i></i>
+        </div>
+            <ul class="dropdown h-20 dropdown-users">
+                <li>
+                    <a href="users.php" class=""><i class="fas fa-user-alt"></i> Ver Usuarios</a>
+                </li>
+                <li>
+                    <a href="registerUser.php" class=""><i class="fas fa-user-plus"></i>Nuevo Usuario</a>
+                </li>
+            </ul>
+    </li>
+    <li class="d-none-phone">
+        <i class="fas fa-bell"></i><a class="nav-links" href="notifications.php">Notificaciones</a>
+    </li>
+    <li>
+        <i class="fas fa-cogs d-none-phone"></i>
+        <a href="options.php" class="nav-links"><i class="fas fa-cogs d-none-desk"></i>Opciones</a>
+    </li>
+    <li>
+        <i class="fas fa-sign-out-alt d-none-phone"></i>
+        <a href="../../controller/sessions/cerrarSesion.php" class="nav-links"><i class="fas fa-sign-out-alt d-none-desk"></i>Cerrar Sesión</a>
+    </li>
+</ul>

@@ -5,27 +5,41 @@ const dropdownBtn = document.querySelectorAll(".dropdown-menu-button");
 dropdownBtn.forEach( btn => {
 	btn.addEventListener('click', ()=>{
 		console.log(btn.parentNode.childNodes[3]);
-		if(btn.children[1].innerHTML.includes('Administración')){
-			if(btn.parentNode.childNodes[5].className.includes('showDropdown')){
-				btn.parentNode.childNodes[5].classList.remove('showDropdown');
-				btn.parentNode.classList.remove('dropdownHeigth');
-				btn.childNodes[5].classList.remove('rotate');
+		if(window.location.pathname.includes('visualizador')){
+			if(btn.children[1].innerHTML.includes('Administración')){
+				if(btn.parentNode.childNodes[5].className.includes('showDropdown-visualizador')){
+					btn.parentNode.childNodes[5].classList.remove('showDropdown-visualizador');
+					btn.parentNode.classList.remove('dropdownHeigth-visualizador');
+					btn.childNodes[5].classList.remove('rotate');
+				}else{
+					btn.parentNode.childNodes[5].classList.add('showDropdown-visualizador');
+					btn.parentNode.classList.add('dropdownHeigth-visualizador');
+					btn.childNodes[5].classList.add('rotate');
+				};
+			}
+		}else if(window.location.pathname.includes('admin')){
+			if(btn.children[1].innerHTML.includes('Administración')){
+				if(btn.parentNode.childNodes[5].className.includes('showDropdown')){
+					btn.parentNode.childNodes[5].classList.remove('showDropdown');
+					btn.parentNode.classList.remove('dropdownHeigth');
+					btn.childNodes[5].classList.remove('rotate');
+				}else{
+					btn.parentNode.childNodes[5].classList.add('showDropdown');
+					btn.parentNode.classList.add('dropdownHeigth');
+					btn.childNodes[5].classList.add('rotate');
+				};
 			}else{
-				btn.parentNode.childNodes[5].classList.add('showDropdown');
-				btn.parentNode.classList.add('dropdownHeigth');
-				btn.childNodes[5].classList.add('rotate');
-			};
-		}else{
-			if(btn.parentNode.childNodes[5].className.includes('showDropdownUser')){
-				btn.parentNode.childNodes[5].classList.remove('showDropdownUser');
-				btn.parentNode.classList.remove('dropdownHeigthUser');
-				btn.childNodes[5].classList.remove('rotate');
-				
-			}else{
-				btn.parentNode.childNodes[5].classList.add('showDropdownUser');
-				btn.parentNode.classList.add('dropdownHeigthUser');
-				btn.childNodes[5].classList.add('rotate');
-			};
+				if(btn.parentNode.childNodes[5].className.includes('showDropdownUser')){
+					btn.parentNode.childNodes[5].classList.remove('showDropdownUser');
+					btn.parentNode.classList.remove('dropdownHeigthUser');
+					btn.childNodes[5].classList.remove('rotate');
+					
+				}else{
+					btn.parentNode.childNodes[5].classList.add('showDropdownUser');
+					btn.parentNode.classList.add('dropdownHeigthUser');
+					btn.childNodes[5].classList.add('rotate');
+				};
+			}
 		}
 	})
 });
@@ -38,9 +52,11 @@ const li = document.querySelectorAll('#mainHeader nav div ul li');
 const avatar = document.querySelector('.box__avatar');
 
 
-console.log(header.childNodes[3].childNodes[9].childNodes[3]);
+// console.log(window.location.pathname.includes('visualizador'));
+
 
 hamburguer.addEventListener('click', () => {
+	
 	if(header.childNodes[3].childNodes[9].className.includes('menuComplete')){
 		spanHamburguer.classList.remove('burger-equis');
 		header.childNodes[3].childNodes[9].classList.remove('menuComplete');
@@ -57,4 +73,5 @@ hamburguer.addEventListener('click', () => {
 			lis.classList.add('liHeight');
 		})
 	}
+
 })
