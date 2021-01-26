@@ -328,6 +328,9 @@ footer{
 .ml-3{
   margin-left: 130px !important;
 }
+.ml-4{
+  margin-left: 20px !important;
+}
 .mr-1{
   margin-right: 10px;
 }
@@ -545,12 +548,17 @@ input[type=input]:focus{
 /*  */
 
 .camera{
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 350px;
   background-color: #F2F2F2;
   border-radius: 1px;
   margin: auto;
   margin-top: 48px;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  object-position: center center;
 }
 .input-field.col label {
    left: 1rem;

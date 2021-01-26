@@ -1,12 +1,52 @@
+
+
+
+function stop(){
+
+    const video = document.querySelector('#preview');
+    stream = video.srcObject;
+    tracks = stream.getTracks();
+    tracks.forEach((track)=>{
+        track.stop();
+    }) 
+    video.srcObject = null
+
+}
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', scan);
 
+// const reload = document.querySelector('#reload');
+
+// reload.addEventListener('click', scan)
+
+
+
 function scan(){
-    var scanner = new Instascan.Scanner({ video: document.getElementById('preview'), scanPeriod: 5, mirror: false});
+
+    navigator.mediaDevices.getUserMedia({ audio: false, video: true}).then((stream)=>{
+        console.log(stream);
+    }).catch((err) => {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'No fue posible acceder a la cámara!',
+            showConfirmButton: false,
+            timer: 3500,
+            footer: '<a class="center">Por favor recarga la página y acepta los permisos para poder acceder a la cámara</a>'
+          })
+    });
+
+
+    let scanner = new Instascan.Scanner({ video: document.getElementById('preview'), scanPeriod: 5, mirror: false});
     const result = document.querySelector('#result');
     scanner.addListener('scan',function(content){
         console.log(content);
-        result.innerHTML = content;
-        // window.location.href=content;
+        // result.innerHTML = content;
+        window.location.href = content;
     });
         Instascan.Camera.getCameras().then(function (cameras){
             if(cameras.length>0){
@@ -37,5 +77,3 @@ function scan(){
             // alert(e);
         });
 }
-
-

@@ -48,22 +48,25 @@
         </div>
         <div class="row">
            <div class="col s12 center-align d-flex">
-               <video id="preview" class="camera z-depth-2"></video>
+               <video id="preview" class="camera z-depth-2" autoplay></video>
                <div id="result"></div>
            </div>
         </div>
-        <div class="col s12 center-align mb-5-phone d-flex-alter mt-3">
+        <div class="col s12 center-align mb-5-phone d-flex-alter mt-3 mb-3">
             <a href="leerqr.php"><button type="button" class="btn btn-actions btn-disabled">Volver</button></a>
+            <button type="button" id="reload" class="btn btn-actions btn-color-primary ml-4 ">Reiniciar Consulta</button>
         </div>   
 	</section> 
     <!-- ./ FIRST SECTION  -->
     <footer>
         <h5 class="text-center text-footer">Developed by Montechelo - SENA &copy; </h5>
     </footer>
+    <!-- ALERTS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <!-- CAMERA -->
-    <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js" rel="nofollow"></script>
+    <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
     <!-- LOCAL JAVASCRIPT -->
-    <script src="html5-qrcode-demo.js"></script>
+    <script type="text/javascript" src="../../js/html5-qrcode-demo.js"></script>
     <script type="text/javascript" src="../../js/menu.js"></script>
     <script type="text/javascript" src="../../js/loader.js"></script>
 

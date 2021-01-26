@@ -29,8 +29,40 @@ function newStateUser(url,action,id,labelTable){
         // Reescribimos el campo del estado según la respuesta de la consulta
         if(response === "habilitar"){
             labelTable.innerHTML = 'Activo';
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 2000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                  toast.addEventListener('mouseenter', Swal.stopTimer)
+                  toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+              })
+              
+              Toast.fire({
+                icon: 'success',
+                title: 'Usuario Activado'
+              })
         }else if(response === "deshabilitar"){
             labelTable.innerHTML = 'Inactivo';
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                  toast.addEventListener('mouseenter', Swal.stopTimer)
+                  toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+              })
+              
+              Toast.fire({
+                icon: 'success',
+                title: 'Usuario Inactivado'
+              })
         }
     })
     .catch(error => console.log(error));   

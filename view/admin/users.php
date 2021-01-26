@@ -75,6 +75,8 @@
     </footer>
 
     <!-- SCRIPTS -->
+    <!-- ALERTS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- JQUERY :/ -->

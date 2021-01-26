@@ -48,24 +48,61 @@
         </div>
         <div class="row">
             <div class="col s12 center-align">
-                <form action="" class="col s10 m-auto f-none ml-2 ml-0-phone">
+                <form action="../../controller/admin/create/registerImplement.php" class="col s10 m-auto f-none ml-2 ml-0-phone" method="POST" >
                     <div class="row">
                         <div class="input-field col s12 m6">
-                            <input id="name_implement" type="text" class="validate input-control" >
+                            <input id="name_implement" type="text" class="validate input-control" name="name_implement" maxlength="255" >
                             <label for="name_implement">Nombre del implemento</label>
                         </div>
-                        <div class="input-field col s12 m6">
-                            <input id="marc_implement" type="text" class="validate input-control" >
-                            <label for="marc_implement">Marca del implemento</label>
-                        </div>
+                        <div class="input-field col s12 m6 mt-2">
+                            <div>
+                                <label class="prefix-label">Marca del implemento</label>
+                            </div>
+                            <select class="browser-default" id="marc_implement" name="marc_implement">
+                              <option value="" disabled selected>Selecciona una opción</option>
+                              <option value="acer">Acer</option>
+                              <option value="aerocool">Aerocool</option>
+                              <option value="alcatel">Alcatel</option>
+                              <option value="apple">Apple</option>
+                              <option value="asus">Asus</option>
+                              <option value="benq">Benq</option>
+                              <option value="corsair">Corsair</option>
+                              <option value="dell">Dell</option>
+                              <option value="huawei">Huawei</option>
+                              <option value="hp">HP</option>
+                              <option value="kalley">Kalley</option>
+                              <option value="lanix">Lanix</option>
+                              <option value="lenovo">Lenovo</option>
+                              <option value="lg">LG</option>
+                              <option value="logitech">Logitech</option>
+                              <option value="acer">Acer</option>
+                              <option value="msi">MSI</option>
+                              <option value="razer">Razer</option>
+                              <option value="redragon">Redragon</option>
+                              <option value="sony">Sony</option>
+                              <option value="samsung">Samsung</option>
+                              <option value="toshiba">Toshiba</option>
+                              <option value="xioami">Xioami</option>
+                              <option value="otro">Otro</option>
+                                <!-- <option value="2">Visualizador</option> -->
+                            </select>
+                        </div>           
                     </div>
                     <div class="row">
-                        <div class="input-field col s12 m6">
-                            <input id="state" type="text" class="validate input-control">
-                            <label for="state">Estado</label>
+                        <div class="input-field col s12 m6 mt-2">
+                            <div>
+                                <label class="prefix-label">Estado</label>
+                            </div>
+                            <select class="browser-default" id="state" name="state">
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="1">Bueno</option>
+                            <option value="2">Regular</option>
+                            <option value="0">Malo</option>
+                            <!-- <option value="2">Visualizador</option> -->
+                            </select>
                         </div>
                         <div class="input-field col s12 m6">
-                            <input id="serial" type="text" class="validate input-control">
+                            <input id="serial" type="text" class="validate input-control" name="serial" maxlength="50">
                             <label for="serial">Serial</label>
                         </div>
                     </div>
@@ -74,27 +111,27 @@
                             <div>
                                 <label class="prefix-label">Tipo de implmento</label>
                             </div>
-                            <select class="browser-default">
+                            <select class="browser-default" name="type_implement">
                               <option value="" disabled selected>Selecciona una opción</option>
                               <option value="1">Técnologico</option>
                               <!-- <option value="2">Visualizador</option> -->
                             </select>
                         </div>
                         <div class="input-field col s12 m6">
-                            <input id="ip" type="text" class="validate input-control">
+                            <input id="ip" type="text" class="validate input-control" pattern="[0-9_.]+" oninvalid="setCustomValidity('Ingrese un formato de ip valido: 192.168.0.1')" oninput="setCustomValidity('')"  minlength="8" minlength="20" name="ip">
                             <label for="ip">IP del implemento</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <textarea id="description" class="materialize-textarea"></textarea>
+                            <textarea id="description" class="materialize-textarea validate" pattern='[A-Za-z0-9_.,""=()/&%#!°|+_<>´´-]+' oninvalid="setCustomValidity('No ingrese caracteres invalidos a la descripción')" oninput="setCustomValidity('')"  minlength="8"  maxlength="255" name="description" required></textarea>
                             <label for="description">Descripción</label>
                         </div>
                     </div>
                     <div class="row mb-2 mb-5-phone">
                         <div class="float-r right-align d-flex-alter">
                             <a href="home.php">
-                                <button class="btn btn-actions btn-disabled">Volver</button>
+                                <button type="button" class="btn btn-actions btn-disabled">Volver</button>
                             </a>
                                 <button type="submit" class="btn btn-actions btn-color-primary">Enviar</button>
                         </div>

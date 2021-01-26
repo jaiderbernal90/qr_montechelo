@@ -1,5 +1,6 @@
 <?php
     require_once('../../controller/sessions/security/securityAdmin.php');
+    require_once('../../controller/admin/read/loadImplements.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -49,7 +50,7 @@
                 <span class="pt-5">En esta sección podrás encontrar todos los implementos que se han cargado al sistema con la opción de descargarlos o ver la información a detalle.</span>
             </div>
             <div class="right-align show-only-desktop m-14">
-                <button class="btn">Registrar</button>
+                <a href="registerImplements.php"><button class="btn">Registrar</button></a>
             </div>
             <div class="fixed-action-btn show-only-phone">
                 <a class="btn-floating btn-large color-primary">
@@ -58,32 +59,17 @@
               </div> 
         </div>
         <div class="row">
-            <table class="display table dataTable table-striped table-sm" cellspacing="0">
-                <thead class="header-table">
-                    <tr class="text-center">
-                        <th class="th-sm">NOMBRE</th>
-                        <th class="th-sm">DESCRIPCIÓN</th>
-                        <th class="th-sm"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="colum1 colum1-stats">Computador Portatil</td>
-                        <td class="colum2 colum2-stats">Computador Portatil Lenovo 14" - 8RAM - i7 9700k - NVIDIA 3080TI</td>
-                        <td class="colum5 colum3-stats colum-icon-imp">
-                            <a class="icon-table pr-2" href=""><i class="fas fa-eye info-title" data-title="Ver más"></i></a>
-                            <a class="icon-table pr-2" href=""><i class="fas fa-download info-title" data-title="Descargar QR"></i></a>
-                            <a class="icon-table pr-1" href=""><i class="fas fa-file-pdf info-user" data-title="Descargar reporte"></i></a>
-                        </td>
-                    </tr>
-                </tbody>
+            <?php loadImplements(); ?>
+
+
                 <!-- PREV
                 <i class="fas fa-chevron-left"></i> 
                  NEXt
                 <i class="fas fa-chevron-right"></i> -->           
-            </table>
         </div>   
-	</section> 
+    </section>
+
+
  <!-- ./ FIRST SECTION  -->
     <footer>
         <h5 class="text-center text-footer">Developed by Montechelo - SENA &copy; </h5>
@@ -98,6 +84,7 @@
     <script type="text/javascript" src="../../js/menu.js"></script>
     <script type="text/javascript" src="../../js/table.js"></script>
     <script type="text/javascript" src="../../js/loader.js"></script>
+    <script type="text/javascript" src="../../js/generate-qr.js"></script>
 
 </body>
 </html>
